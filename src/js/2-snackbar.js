@@ -1,5 +1,5 @@
 import iziToast from 'izitoast';
-// Додатковий імпорт стилів
+
 import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.form');
@@ -15,9 +15,7 @@ function handleFormSubmit(event) {
   const formData = new FormData(form);
   const delay = formData.get('delay');
   const state = formData.get('state');
-  //   const promise = createPromise(delay, state);
-  //   promise.then(console.log('THEN!!')).catch(console.log('CATCH!!'));
-  // !!! чомусь спрацьовують, кетчь ругаеться!
+  
   createPromise(delay, state)
     .then(() =>
       iziToast.success({
@@ -48,5 +46,5 @@ function createPromise(delay, state) {
       }
     }, delay);
   });
-  //   return promise;
-}
+  
+};

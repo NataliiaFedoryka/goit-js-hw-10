@@ -118,7 +118,7 @@ function timerWriter(time) {
   let hours = time.hours;
   let minutes = time.minutes;
   let seconds = time.seconds;
-  // console.log('Тестовое время', timeTest.toString().padStart(2, '0'));
+ 
 
   refs.days.textContent = days.toString().padStart(2, '0');
   refs.hours.textContent = hours.toString().padStart(2, '0');
